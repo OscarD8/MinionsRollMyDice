@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
  * Room database instance for MinionsRollMyDice application.
  * Instantiation is fully delegated to the Koin DI container in AppModule.
  */
-@Database(entities = [CharacterAttributesEntity::class], version = 1, exportSchema = false)
+@Database(entities = [CharacterAttributesEntity::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun characterAttributesDao(): CharacterAttributesDao
 }

@@ -14,13 +14,19 @@ data class CharacterAttributesEntity(
     @PrimaryKey val id: Int = 1,
     @ColumnInfo(name = "wisdom") val wisdom: Int = 0,
     @ColumnInfo(name = "insight") val insight: Int = 0,
-    @ColumnInfo(name = "inspired") val inspired: Int = 0
+    @ColumnInfo(name = "inspired") val inspired: Int = 0,
+    @ColumnInfo(name = "strength") val strength: Int = 0,
+    @ColumnInfo(name = "wealth") val wealth: Int = 0,
+    @ColumnInfo(name = "luck") val luck: Int = 0
 ) {
     fun toDomain(): CharacterAttributes {
         return CharacterAttributes(
             wisdom = wisdom,
             insight = insight,
-            inspired = inspired
+            inspired = inspired,
+            strength = strength,
+            wealth = wealth,
+            luck = luck
         )
     }
 
@@ -30,7 +36,10 @@ data class CharacterAttributesEntity(
                 id = 1,
                 wisdom = domain.wisdom,
                 insight = domain.insight,
-                inspired = domain.inspired
+                inspired = domain.inspired,
+                strength = domain.strength,
+                wealth = domain.wealth,
+                luck = domain.luck
             )
         }
     }

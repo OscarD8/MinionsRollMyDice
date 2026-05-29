@@ -36,6 +36,7 @@ class AppModule {
             AppDatabase::class.java,
             "minions_roll_my_dice_db"
         )
+        .fallbackToDestructiveMigration()
         // Room 2.8.4+ feature: configure the coroutine context used for queries
         .setQueryCoroutineContext(ioDispatcher)
         .build()
